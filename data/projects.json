@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Mass Analytics",
+    "description": "Büyük veri analitiği ve yapay zeka destekli iş zekası platformu. Gerçek zamanlı veri işleme ve öngörü modelleri.",
+    "status": "active",
+    "link": "#"
+  },
+  {
+    "name": "Mass Cloud",
+    "description": "Yüksek performanslı, ölçeklenebilir bulut altyapı çözümleri. Konteyner orkestrasyon ve otomatik dağıtım.",
+    "status": "active",
+    "link": "#"
+  },
+  {
+    "name": "Mass Guard",
+    "description": "Uçtan uca siber güvenlik platformu. Tehdit tespiti, güvenlik açığı analizi ve uyumluluk yönetimi.",
+    "status": "active",
+    "link": "#"
+  },
+  {
+    "name": "Mass Automate",
+    "description": "Akıllı süreç otomasyonu ve iş akışı yönetimi. Düşük kodlu entegrasyon altyapısı.",
+    "status": "coming-soon",
+    "link": null
+  },
+  {
+    "name": "Mass Edge",
+    "description": "Edge computing ve IoT cihaz yönetim platformu. Dağıtık veri işleme ve gerçek zamanlı analitik.",
+    "status": "coming-soon",
+    "link": null
+  }
+]
