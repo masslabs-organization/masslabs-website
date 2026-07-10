@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gizlilik Politikası — MassLabs</title>
+  <link rel="icon" type="image/png" href="assets/images/logo-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .legal-page { max-width: 780px; margin: 0 auto; padding: calc(var(--navbar-h) + 60px) 24px 80px; }
+    .legal-page h1 { font-family: 'Outfit', sans-serif; font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
+    .legal-page .meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 48px; }
+    .legal-page h2 { font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; margin: 36px 0 12px; color: var(--orange); }
+    .legal-page p, .legal-page li { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 12px; }
+    .legal-page ul { padding-left: 20px; }
+    .legal-page li { margin-bottom: 6px; }
+    .legal-page a { color: var(--orange); }
+    .legal-back { display: inline-flex; align-items: center; gap: 8px; color: var(--orange); font-size: 0.875rem; font-weight: 600; margin-bottom: 40px; text-decoration: none; transition: gap 0.2s; }
+    .legal-back:hover { gap: 12px; }
+  </style>
+</head>
+<body>
+<nav id="navbar" class="scrolled">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <img class="nav-logo-img" src="assets/images/logo-icon.png" alt="MassLabs Logo" />
+      <div class="nav-logo-text">
+        <span class="nav-logo-title">MASSLABS</span>
+        <span class="nav-logo-sub">SaaS & AI Otomasyon</span>
+      </div>
+    </a>
+  </div>
+</nav>
+
+<div class="legal-page">
+  <a href="index.html" class="legal-back">← Ana Sayfaya Dön</a>
+
+  <h1>Gizlilik Politikası</h1>
+  <p class="meta">Son güncelleme: Temmuz 2025</p>
+
+  <p>
+    MassLabs ("biz", "bizim") olarak, web sitemizi ziyaret eden ve iletişim formumuzu kullanan
+    kişilerin gizliliğini ciddiye alıyoruz. Bu politika, hangi verileri topladığımızı,
+    neden topladığımızı ve bu verileri nasıl kullandığımızı açıklar.
+  </p>
+
+  <h2>1. Toplanan Veriler</h2>
+  <p>
+    Sitemiz genel olarak pasif bir ziyaretçi deneyimi sunar; hesap oluşturma veya kullanıcı
+    takibi yapılmaz. Aşağıdaki durumlarda veri toplanabilir:
+  </p>
+  <ul>
+    <li><strong>İletişim Formu:</strong> Ad soyad, e-posta adresi, proje açıklaması ve seçtiğiniz diğer form alanları.</li>
+    <li><strong>Tarayıcı Verileri:</strong> Standart sunucu logları (IP adresi, tarayıcı türü, ziyaret süresi). Bu veriler anonimdir ve bireysel takip amacıyla kullanılmaz.</li>
+  </ul>
+
+  <h2>2. Verilerin Kullanım Amacı</h2>
+  <ul>
+    <li>İletişim formundan gelen bilgiler yalnızca proje değerlendirmesi ve size geri dönüş yapmak amacıyla kullanılır.</li>
+    <li>Verileriniz üçüncü şahıslarla satılmaz, kiralanmaz veya ticari amaçla paylaşılmaz.</li>
+    <li>Yalnızca form işleme altyapısı sağlayıcıları (ör. Formspree) ile veri paylaşımı olabilir; bu sağlayıcılar kendi gizlilik politikalarına tabidir.</li>
+  </ul>
+
+  <h2>3. Veri Saklama</h2>
+  <p>
+    İletişim formu verileri, proje değerlendirmesi tamamlandıktan sonra makul bir süre içinde
+    silinir. Yasal bir zorunluluk olmadıkça verileriniz kalıcı olarak saklanmaz.
+  </p>
+
+  <h2>4. Çerezler</h2>
+  <p>
+    Sitemiz işlevsel olarak zorunlu olmayan çerezler kullanmaz. Dil tercihinizi saklayan
+    <code>masslabs-lang</code> adlı bir localStorage anahtarı kullanılmaktadır; bu bir çerez
+    değildir ve sunucuya iletilmez. Daha fazla bilgi için <a href="cookies.html">Çerez Politikamızı</a> inceleyin.
+  </p>
+
+  <h2>5. Haklarınız</h2>
+  <p>
+    Kişisel verilerinize ilişkin olarak aşağıdaki haklarınız mevcuttur:
+  </p>
+  <ul>
+    <li>Verilerinize erişim talep etme</li>
+    <li>Verilerinizin düzeltilmesini ya da silinmesini isteme</li>
+    <li>İşlemeye itiraz etme</li>
+  </ul>
+  <p>Bu haklarınızı kullanmak için <a href="mailto:support@masslabs.tech">support@masslabs.tech</a> adresine e-posta gönderebilirsiniz.</p>
+
+  <h2>6. İletişim</h2>
+  <p>
+    Bu politikayla ilgili sorularınız için:<br/>
+    <a href="mailto:support@masslabs.tech">support@masslabs.tech</a>
+  </p>
+</div>
+<script>
+  // Navbar scroll effect
+  var nb = document.getElementById('navbar');
+  window.addEventListener('scroll', function() { if(nb) nb.classList.toggle('scrolled', window.scrollY > 10); });
+</script>
+</body>
+</html>

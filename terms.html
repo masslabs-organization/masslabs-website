@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kullanım Koşulları — MassLabs</title>
+  <link rel="icon" type="image/png" href="assets/images/logo-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .legal-page { max-width: 780px; margin: 0 auto; padding: calc(var(--navbar-h) + 60px) 24px 80px; }
+    .legal-page h1 { font-family: 'Outfit', sans-serif; font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
+    .legal-page .meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 48px; }
+    .legal-page h2 { font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; margin: 36px 0 12px; color: var(--orange); }
+    .legal-page p, .legal-page li { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 12px; }
+    .legal-page ul { padding-left: 20px; }
+    .legal-page li { margin-bottom: 6px; }
+    .legal-page a { color: var(--orange); }
+    .legal-back { display: inline-flex; align-items: center; gap: 8px; color: var(--orange); font-size: 0.875rem; font-weight: 600; margin-bottom: 40px; text-decoration: none; transition: gap 0.2s; }
+    .legal-back:hover { gap: 12px; }
+  </style>
+</head>
+<body>
+<nav id="navbar" class="scrolled">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <img class="nav-logo-img" src="assets/images/logo-icon.png" alt="MassLabs Logo" />
+      <div class="nav-logo-text">
+        <span class="nav-logo-title">MASSLABS</span>
+        <span class="nav-logo-sub">SaaS & AI Otomasyon</span>
+      </div>
+    </a>
+  </div>
+</nav>
+
+<div class="legal-page">
+  <a href="index.html" class="legal-back">← Ana Sayfaya Dön</a>
+
+  <h1>Kullanım Koşulları</h1>
+  <p class="meta">Son güncelleme: Temmuz 2025</p>
+
+  <p>
+    Bu web sitesini (masslabs.tech) ziyaret ederek aşağıdaki kullanım koşullarını
+    kabul etmiş sayılırsınız. Koşulları kabul etmiyorsanız lütfen siteyi kullanmayın.
+  </p>
+
+  <h2>1. Hizmet Kapsamı</h2>
+  <p>
+    MassLabs, bu web sitesi aracılığıyla yazılım geliştirme ve danışmanlık hizmetlerine
+    ilişkin bilgi ve iletişim olanağı sunar. Site yalnızca bilgilendirme ve iletişim
+    amacıyla tasarlanmıştır.
+  </p>
+
+  <h2>2. Fikri Mülkiyet</h2>
+  <p>
+    Bu sitedeki tüm içerik (metinler, görseller, logo, tasarım) MassLabs'a aittir ve
+    telif hakkı yasalarıyla korunmaktadır. İzin alınmadan kopyalanamaz, dağıtılamaz
+    veya ticari amaçla kullanılamaz.
+  </p>
+
+  <h2>3. İletişim Formu</h2>
+  <p>
+    İletişim formu aracılığıyla iletilen bilgiler MassLabs tarafından yalnızca
+    proje değerlendirmesi için kullanılır. Form gönderimi herhangi bir sözleşme
+    veya hizmet yükümlülüğü oluşturmaz.
+  </p>
+
+  <h2>4. Sorumluluk Sınırlaması</h2>
+  <p>
+    Site içeriği "olduğu gibi" sunulmaktadır. MassLabs, sitede yer alan bilgilerin
+    doğruluğu, güncelliği veya eksiksizliği konusunda garanti vermez. Siteden
+    bağlantı verilen üçüncü taraf kaynaklardan MassLabs sorumlu değildir.
+  </p>
+
+  <h2>5. Değişiklikler</h2>
+  <p>
+    MassLabs, bu koşulları önceden bildirimde bulunmaksızın güncelleme hakkını saklı tutar.
+    Güncel koşulları bu sayfada bulabilirsiniz.
+  </p>
+
+  <h2>6. İletişim</h2>
+  <p>
+    Sorularınız için: <a href="mailto:support@masslabs.tech">support@masslabs.tech</a>
+  </p>
+</div>
+<script>
+  var nb = document.getElementById('navbar');
+  window.addEventListener('scroll', function() { if(nb) nb.classList.toggle('scrolled', window.scrollY > 10); });
+</script>
+</body>
+</html>
