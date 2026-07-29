@@ -1,0 +1,20 @@
+[
+  {
+    "slug": "pma",
+    "name": "Project Manager Assistant — PMA",
+    "status": "in-development",
+    "link": ""
+  },
+  {
+    "slug": "review-ai",
+    "name": "Review AI",
+    "status": "in-development",
+    "link": ""
+  },
+  {
+    "slug": "archived-rd",
+    "name": "AI Agent Infrastructure Research",
+    "status": "archived",
+    "link": ""
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "name": "masslabs-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/build.mjs && node scripts/serve.mjs",
+    "check": "node scripts/check.mjs",
+    "lint": "node scripts/check.mjs",
+    "smoke": "node scripts/smoke.mjs",
+    "typecheck": "node --check scripts/build.mjs && node --check js/main.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
