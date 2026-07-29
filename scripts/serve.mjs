@@ -4,7 +4,8 @@ import { createServer } from "node:http";
 import { extname, join, normalize } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const root = fileURLToPath(new URL("../", import.meta.url));
+const projectRoot = fileURLToPath(new URL("../", import.meta.url));
+const root = process.env.SERVE_ROOT ? join(projectRoot, process.env.SERVE_ROOT) : projectRoot;
 const port = Number(process.env.PORT || 4173);
 const types = { ".css": "text/css; charset=utf-8", ".html": "text/html; charset=utf-8", ".js": "text/javascript; charset=utf-8", ".json": "application/json; charset=utf-8", ".png": "image/png", ".svg": "image/svg+xml", ".txt": "text/plain; charset=utf-8", ".xml": "application/xml; charset=utf-8" };
 

@@ -39,6 +39,14 @@ for (const route of [...new Set(pages)]) {
 
 if (!siteConfig.siteUrl.startsWith("https://")) errors.push("siteUrl must use https");
 
+for (const artifact of ["index.html", "404.html", "robots.txt", "sitemap.xml", "tr/index.html", "en/index.html", "css/styles.css", "js/main.js"]) {
+  try {
+    await access(new URL("../public/" + artifact, import.meta.url));
+  } catch {
+    errors.push("public/: missing build artifact " + artifact);
+  }
+}
+
 if (errors.length) {
   console.error(errors.join("\n"));
   process.exit(1);

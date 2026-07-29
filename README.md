@@ -66,12 +66,12 @@ NEXT_PUBLIC_SITE_URL canonical ve sitemap adresini, CONTACT_EMAIL iletişim nokt
 1. GitHub repository’sini Vercel’e bağlayın.
 2. Framework Preset olarak Other seçin.
 3. Build Command alanına npm run build yazın.
-4. Output Directory alanını . olarak ayarlayın.
+4. Output Directory alanını public olarak ayarlayın. Repository içindeki vercel.json bu değeri ayrıca zorunlu kılar.
 5. Node.js sürümünü 20 veya üzeri seçin.
 6. Environment variable değerlerini Production ortamına ekleyin.
 7. Deploy işlemini başlatın.
 
-vercel.json güvenlik başlıklarını ve temiz URL davranışını tanımlar. Build; sitemap.xml, robots.txt, 404 sayfası ve tüm yerelleştirilmiş HTML dosyalarını üretir.
+vercel.json güvenlik başlıklarını, temiz URL davranışını ve public çıktı klasörünü tanımlar. Build; sitemap.xml, robots.txt, 404 sayfası ve tüm yerelleştirilmiş HTML dosyalarını public/ altında paketler.
 
 ## Kalite Kontrolleri
 

@@ -1,6 +1,9 @@
 import { spawn } from "node:child_process";
 
-const server = spawn(process.execPath, ["scripts/serve.mjs"], { stdio: ["ignore", "pipe", "pipe"] });
+const server = spawn(process.execPath, ["scripts/serve.mjs"], {
+  stdio: ["ignore", "pipe", "pipe"],
+  env: { ...process.env, SERVE_ROOT: "public" }
+});
 const timeout = setTimeout(function () {
   server.kill();
   console.error("Local server did not start in time.");

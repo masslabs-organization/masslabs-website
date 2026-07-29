@@ -1,4 +1,4 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { cp, mkdir, rm, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { siteConfig } from "../site.config.mjs";
@@ -425,4 +425,14 @@ await output("404.html", notFoundPage("tr"));
 await output("robots.txt", "User-agent: *\nAllow: /\nSitemap: " + absolute("/sitemap.xml") + "\n");
 await output("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + generated.map((route) => "  <url><loc>" + absolute(route) + "</loc></url>").join("\n") + "\n</urlset>\n");
 
-console.log("Generated " + generated.length + " localized pages.");
+const publicRoot = join(root, "public");
+await rm(publicRoot, { recursive: true, force: true });
+await mkdir(publicRoot, { recursive: true });
+for (const directory of ["assets", "css", "js", "tr", "en"]) {
+  await cp(join(root, directory), join(publicRoot, directory), { recursive: true });
+}
+for (const file of ["index.html", "404.html", "robots.txt", "sitemap.xml"]) {
+  await cp(join(root, file), join(publicRoot, file));
+}
+
+console.log("Generated " + generated.length + " localized pages in public/.");
