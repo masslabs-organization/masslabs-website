@@ -81,7 +81,7 @@ export const home = {
     servicesTitle: "İhtiyaca göre şekillenen teknik yetkinlikler.",
     servicesIntro: "Hazır kalıplar yerine problemi, mevcut sistemi ve hedeflenen sonucu birlikte değerlendiriyoruz.",
     whyEyebrow: "Neden MassLabs?",
-    whyTitle: "Küçük çekirdek ekip, doğrudan ve esnek çalışma.",
+    whyTitle: "Dinamik ekip, doğrudan ve esnek çalışma.",
     whyText: "Her projeyi aynı şablona yerleştirmek yerine problemi, kullanıcıyı ve mevcut sistemi anlamaya çalışıyoruz. Hızlı prototipten uzun vadeli ürün geliştirmeye kadar ihtiyaca uygun bir çalışma modeli kuruyoruz.",
     whyItems: [
       ["Dinamik yapı", "Kararları kısa iletişim hatlarıyla alır, değişen ihtiyaçlara kontrollü biçimde uyum sağlarız."],
@@ -96,8 +96,8 @@ export const home = {
     researchTitle: "Yalnızca geliştirmiyor, araştırıyoruz.",
     researchText: "Yeni araçları ve teknolojileri yalnızca popüler oldukları için kullanmıyoruz. İhtiyaca uygunluklarını araştırıyor, küçük ölçekli testler yapıyor ve gerçek projelerde sağlayabilecekleri değeri değerlendiriyoruz.",
     researchLink: "Araştırma yaklaşımımız",
-    aboutTitle: "İzmir’de kurulan iki kişilik, ürün odaklı bir çekirdek ekip.",
-    aboutText: "MassLabs, yazılım geliştirme ve ürün üretme odağında çalışan iki kurucu tarafından İzmir’de kuruldu. Küçük ve dinamik çekirdek yapımızı, ihtiyaç duyulduğunda projeye özel uzmanlıklarla genişletiyoruz.",
+    aboutTitle: "Meraklı, dinamik ve üretken bir ekip.",
+    aboutText: "MassLabs, İzmir’de yazılım geliştirme ve ürün üretme odağıyla kuruldu. Dinamik yapımızı, ihtiyaç duyulduğunda projeye özel uzmanlıklarla genişletiyoruz.",
     finalTitle: "Bir fikriniz veya çözmek istediğiniz bir problem mi var?",
     finalText: "Projenizi, mevcut sisteminizi veya geliştirmek istediğiniz ürünü bize anlatın. İhtiyacınızı birlikte değerlendirelim."
   },
@@ -130,8 +130,8 @@ export const home = {
     researchTitle: "We do more than build. We research.",
     researchText: "We do not adopt tools simply because they are popular. We study their fit, run small-scale tests and assess the value they can deliver in real projects.",
     researchLink: "Our research approach",
-    aboutTitle: "A two-person, product-focused core team founded in Izmir.",
-    aboutText: "MassLabs was founded in Izmir by two founders focused on software and product development. We extend our small, dynamic core with project-specific expertise when needed.",
+    aboutTitle: "A curious, dynamic and productive team.",
+    aboutText: "MassLabs was founded in Izmir with a focus on software and product development. We extend our dynamic structure with project-specific expertise when needed.",
     finalTitle: "Have an idea or a problem you want to solve?",
     finalText: "Tell us about your project, existing system or the product you want to build. Let’s evaluate the need together."
   }
