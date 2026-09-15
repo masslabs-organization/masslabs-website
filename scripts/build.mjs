@@ -73,8 +73,8 @@ function seoHead({ locale, key, title, description, path, slug = "" }) {
     '<meta name="twitter:title" content="' + escapeHtml(title) + '">',
     '<meta name="twitter:description" content="' + escapeHtml(description) + '">',
     '<meta name="twitter:image" content="' + absolute("/assets/masslabs-logo-chatgpt.png") + '">',
-    '<link rel="icon" type="image/png" href="/assets/masslabs-logo-chatgpt.png">',
-    '<link rel="apple-touch-icon" href="/assets/masslabs-logo-chatgpt.png">',
+    '<link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon.png">',
+    '<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">',
     '<link rel="preconnect" href="https://fonts.googleapis.com">',
     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>',
     '<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">',
@@ -86,7 +86,7 @@ function seoHead({ locale, key, title, description, path, slug = "" }) {
 function logo(locale, footer = false) {
   return (
     '<a class="brand' + (footer ? " brand--footer" : "") + '" href="' + routes[locale].home + '" aria-label="MassLabs">' +
-      '<span class="brand__mark"><img src="/assets/masslabs-logo-chatgpt.png" width="40" height="40" alt=""></span>' +
+      '<span class="brand__mark"><img src="/assets/logo-small.png" width="44" height="44" alt=""></span>' +
       '<span class="brand__name">Mass<span>Labs</span></span>' +
     "</a>"
   );
@@ -422,7 +422,7 @@ for (const locale of ["tr", "en"]) {
   await output(routes[locale].projects.slice(1) + "review-ai/index.html", '<!DOCTYPE html><html lang="' + locale + '"><head><meta charset="UTF-8"><meta http-equiv="refresh" content="0;url=' + target + '"><link rel="canonical" href="' + absolute(target) + '"><title>Reveram | MassLabs</title></head><body><a href="' + target + '">Reveram</a></body></html>');
 }
 
-const rootRedirect = '<!DOCTYPE html><html lang="tr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MassLabs</title><meta http-equiv="refresh" content="0;url=/tr/"><link rel="canonical" href="' + absolute(routes.tr.home) + '"><script>location.replace("/tr/")</script></head><body><a href="/tr/">MassLabs</a></body></html>';
+const rootRedirect = '<!DOCTYPE html><html lang="tr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MassLabs</title><link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon.png"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><meta http-equiv="refresh" content="0;url=/tr/"><link rel="canonical" href="' + absolute(routes.tr.home) + '"><script>location.replace("/tr/")</script></head><body><a href="/tr/">MassLabs</a></body></html>';
 await output("index.html", rootRedirect);
 await output("404.html", notFoundPage("tr"));
 await output("robots.txt", "User-agent: *\nAllow: /\nSitemap: " + absolute("/sitemap.xml") + "\n");
