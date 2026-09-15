@@ -128,17 +128,24 @@ function header(locale, active, key, slug = "") {
   );
 }
 
-function footer(locale) {
+function socialLinks(locale) {
+  const icons = {
+    instagram: '<rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2"/>',
+    x: '<path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.5 22H2.3l8.2-9.4L.8 2h6.5l4.4 6.7L18.9 2Zm-1.1 18h1.7L6.3 3.9H4.5L17.8 20Z"/>',
+    linkedin: '<path d="M5.4 7.5a2.1 2.1 0 1 0 0-4.2 2.1 2.1 0 0 0 0 4.2ZM3.6 9H7v12H3.6V9ZM9.5 9h3.3v1.6c.5-.9 1.7-1.9 3.6-1.9 3.5 0 4.1 2.2 4.1 5.1V21H17v-6.4c0-1.5 0-3.3-2-3.3s-2.2 1.5-2.2 3.2V21H9.5V9Z"/>'
+  };
+  return '<div class="social-links">' + [['instagram', 'Instagram', '@masslabstech'], ['x', 'X', '@masslabstech'], ['linkedin', 'LinkedIn', 'MassLabs']].filter(([key]) => siteConfig.socialLinks[key]).map(([key, label, handle]) =>
+    '<a class="social-link social-link--' + key + '" href="' + escapeHtml(siteConfig.socialLinks[key]) + '" target="_blank" rel="noopener noreferrer"><span class="social-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">' + icons[key] + '</svg></span><span class="social-copy"><strong>' + label + '</strong><span>' + handle + '</span></span><span class="social-arrow" aria-hidden="true">↗</span><span class="sr-only"> (' + (locale === 'tr' ? 'yeni sekmede açılır' : 'opens in a new tab') + ')</span></a>'
+  ).join('') + '</div>';
+}
+
+function footer(locale, hideSocial = false) {
   const text = ui[locale];
-  const social = Object.entries(siteConfig.socialLinks)
-    .filter(([, url]) => Boolean(url))
-    .map(([name, url]) => '<a href="' + escapeHtml(url) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(name[0].toUpperCase() + name.slice(1)) + '<span class="sr-only"> (' + (locale === "tr" ? "yeni sekmede açılır" : "opens in a new tab") + ")</span></a>")
-    .join("");
   return (
     '<footer class="site-footer">' +
+      (hideSocial ? '' : '<div class="shell social-banner"><div><span class="eyebrow-label">' + (locale === 'tr' ? 'Bağlantıda kalalım' : 'Stay connected') + '</span><h2>' + (locale === 'tr' ? 'MassLabs’ı takip edin.' : 'Follow MassLabs.') + '</h2></div>' + socialLinks(locale) + '</div>') +
       '<div class="shell footer__grid">' +
         '<div class="footer__brand">' + logo(locale, true) + "<p>" + text.footerText + "</p><span>" + text.location + "</span>" +
-          (social ? '<div class="social-links">' + social + "</div>" : "") +
         "</div>" +
         '<div class="footer__column"><h2>' + text.nav.services + "</h2>" +
           '<a href="' + routes[locale].services + '#ai">' + capabilities[locale][0].title + "</a>" +
@@ -171,7 +178,7 @@ function layout({ locale, key, title, description, path, active = key, slug = ""
     '<body class="' + pageClass + '">' +
       header(locale, active, key, slug) +
       '<main id="main">' + body + "</main>" +
-      footer(locale) +
+      footer(locale, key === "contact") +
       '<script type="module" src="/js/main.js"></script>' +
     "</body>\n</html>\n"
   );
@@ -346,7 +353,7 @@ function contactPage(locale) {
     [tr ? "Güvenlik" : "Security", siteConfig.securityEmail, tr ? "Güvenlik açıklarını ve ilgili bildirimlerinizi iletin." : "Report vulnerabilities and security concerns."]
   ];
   const body = pageHero(locale, tr ? "İletişim" : "Contact", title, tr ? "Size uygun adresten bize yazın. İlk görüşme ve ön değerlendirme ücretsizdir." : "Email us at the address that fits your enquiry. The first conversation and initial assessment are free.") +
-    '<section class="section section--first"><div class="shell contact-cards">' + contacts.map(([label, email, text]) => '<article class="contact-card"><h2>' + label + '</h2><p>' + text + '</p><a class="text-link" href="mailto:' + email + '">' + email + arrow() + '</a></article>').join('') + '</div></section>';
+    '<section class="section section--first"><div class="shell contact-cards">' + contacts.map(([label, email, text]) => '<article class="contact-card"><h2>' + label + '</h2><p>' + text + '</p><a class="text-link" href="mailto:' + email + '">' + email + arrow() + '</a></article>').join('') + '</div><div class="shell contact-social"><h2>' + (tr ? 'Sosyal medyada da bağlantıda kalalım.' : 'Connect with us on social media.') + '</h2>' + socialLinks(locale) + '</div></section>';
   return layout({ locale, key: "contact", title: title + " | MassLabs", description, path: routes[locale].contact, body });
 }
 
