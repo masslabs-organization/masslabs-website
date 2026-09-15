@@ -81,7 +81,7 @@ export const home = {
     servicesTitle: "İhtiyaca göre şekillenen teknik yetkinlikler.",
     servicesIntro: "Hazır kalıplar yerine problemi, mevcut sistemi ve hedeflenen sonucu birlikte değerlendiriyoruz.",
     whyEyebrow: "Neden MassLabs?",
-    whyTitle: "Küçük çekirdek ekip, doğrudan ve esnek çalışma.",
+    whyTitle: "Doğrudan iletişim, esnek çalışma.",
     whyText: "Her projeyi aynı şablona yerleştirmek yerine problemi, kullanıcıyı ve mevcut sistemi anlamaya çalışıyoruz. Hızlı prototipten uzun vadeli ürün geliştirmeye kadar ihtiyaca uygun bir çalışma modeli kuruyoruz.",
     whyItems: [
       ["Dinamik yapı", "Kararları kısa iletişim hatlarıyla alır, değişen ihtiyaçlara kontrollü biçimde uyum sağlarız."],
@@ -96,8 +96,8 @@ export const home = {
     researchTitle: "Yalnızca geliştirmiyor, araştırıyoruz.",
     researchText: "Yeni araçları ve teknolojileri yalnızca popüler oldukları için kullanmıyoruz. İhtiyaca uygunluklarını araştırıyor, küçük ölçekli testler yapıyor ve gerçek projelerde sağlayabilecekleri değeri değerlendiriyoruz.",
     researchLink: "Araştırma yaklaşımımız",
-    aboutTitle: "İzmir’de kurulan iki kişilik, ürün odaklı bir çekirdek ekip.",
-    aboutText: "MassLabs, yazılım geliştirme ve ürün üretme odağında çalışan iki kurucu tarafından İzmir’de kuruldu. Küçük ve dinamik çekirdek yapımızı, ihtiyaç duyulduğunda projeye özel uzmanlıklarla genişletiyoruz.",
+    aboutTitle: "İzmir merkezli, ürün odaklı teknoloji stüdyosu.",
+    aboutText: "MassLabs, İzmir merkezli bir teknoloji stüdyosudur. Yazılım geliştirme ve ürün üretimine odaklanıyor, her projeyi ihtiyaçlarına uygun uzmanlıkla ele alıyoruz.",
     finalTitle: "Bir fikriniz veya çözmek istediğiniz bir problem mi var?",
     finalText: "Projenizi, mevcut sisteminizi veya geliştirmek istediğiniz ürünü bize anlatın. İhtiyacınızı birlikte değerlendirelim."
   },
@@ -115,7 +115,7 @@ export const home = {
     servicesTitle: "Technical capabilities shaped around the problem.",
     servicesIntro: "We evaluate the problem, the current system and the intended outcome instead of forcing projects into fixed packages.",
     whyEyebrow: "Why MassLabs?",
-    whyTitle: "A focused core team with a direct, flexible way of working.",
+    whyTitle: "A direct, flexible way of working.",
     whyText: "We start by understanding the problem, the user and the existing system. From rapid prototypes to long-term product development, we build a working model around the actual need.",
     whyItems: [
       ["Dynamic structure", "Short communication lines help us decide quickly and respond carefully as needs change."],
@@ -130,8 +130,8 @@ export const home = {
     researchTitle: "We do more than build. We research.",
     researchText: "We do not adopt tools simply because they are popular. We study their fit, run small-scale tests and assess the value they can deliver in real projects.",
     researchLink: "Our research approach",
-    aboutTitle: "A two-person, product-focused core team founded in Izmir.",
-    aboutText: "MassLabs was founded in Izmir by two founders focused on software and product development. We extend our small, dynamic core with project-specific expertise when needed.",
+    aboutTitle: "A product-focused technology studio based in Izmir.",
+    aboutText: "MassLabs is a technology studio based in Izmir. We focus on software and product development, bringing the right expertise to each project.",
     finalTitle: "Have an idea or a problem you want to solve?",
     finalText: "Tell us about your project, existing system or the product you want to build. Let’s evaluate the need together."
   }
@@ -155,12 +155,12 @@ export const capabilities = {
 export const projects = {
   tr: [
     { slug: "pma", name: "Project Manager Assistant — PMA", status: "Geliştirme aşamasında", type: "Yapay zekâ destekli ürün", description: "Özellikle yazılım ekipleri için proje bilgisini düzenlemeyi, görevleri takip etmeyi ve ekip koordinasyonunu kolaylaştırmayı amaçlayan yapay zekâ destekli proje yönetim asistanı.", problem: "Dağınık proje bilgisi ve ekip koordinasyonunda yaşanan görünürlük kaybı.", audience: "Yazılım ekipleri ve teknik proje yöneticileri", tags: ["AI", "SaaS", "Proje yönetimi"] },
-    { slug: "review-ai", name: "Review AI", status: "Geliştirme aşamasında", type: "Müşteri deneyimi platformu", description: "İşletmelerin farklı platformlardaki müşteri yorumlarını tek yerde takip etmesine, analiz etmesine ve uygun yanıtlar oluşturmasına yardımcı olan yapay zekâ destekli müşteri deneyimi platformu.", problem: "Farklı kanallara dağılan yorumları takip etme, anlamlandırma ve zamanında yanıtlama yükü.", audience: "Müşteri deneyimini düzenli takip etmek isteyen işletmeler", tags: ["AI", "Analiz", "Müşteri deneyimi"] },
+    { slug: "reveram", name: "Reveram", status: "Geliştirme aşamasında", type: "Müşteri deneyimi platformu", description: "İşletmelerin farklı platformlardaki müşteri yorumlarını tek yerde takip etmesine, analiz etmesine ve uygun yanıtlar oluşturmasına yardımcı olan yapay zekâ destekli müşteri deneyimi platformu.", problem: "Farklı kanallara dağılan yorumları takip etme, anlamlandırma ve zamanında yanıtlama yükü.", audience: "Müşteri deneyimini düzenli takip etmek isteyen işletmeler", tags: ["AI", "Analiz", "Müşteri deneyimi"] },
     { slug: "archived-rd", name: "Yapay Zekâ Ajanları Altyapı Araştırması", status: "Arşivlenmiş Ar-Ge çalışması", type: "Deneysel altyapı", description: "Yapay zekâ ajanlarının dağıtımı, çalıştırılması, yönetilmesi ve servis hâline getirilmesi üzerine yürütülen önceki bir deneysel altyapı çalışması.", problem: "Farklı yapay zekâ ajanlarının güvenilir biçimde barındırılması ve yönetilmesi.", audience: "Teknik araştırma ve prototipleme", tags: ["Ar-Ge", "AI agents", "Altyapı"], archived: true }
   ],
   en: [
     { slug: "pma", name: "Project Manager Assistant — PMA", status: "In development", type: "AI-assisted product", description: "An AI-assisted project management companion designed to help software teams organise project knowledge, follow tasks and improve team coordination.", problem: "Loss of visibility caused by fragmented project information and coordination workflows.", audience: "Software teams and technical project managers", tags: ["AI", "SaaS", "Project management"] },
-    { slug: "review-ai", name: "Review AI", status: "In development", type: "Customer experience platform", description: "An AI-assisted customer experience platform that helps businesses monitor reviews across different platforms, analyse them and prepare relevant responses.", problem: "The operational load of monitoring, interpreting and responding to reviews spread across channels.", audience: "Businesses that want a structured view of customer feedback", tags: ["AI", "Analysis", "Customer experience"] },
+    { slug: "reveram", name: "Reveram", status: "In development", type: "Customer experience platform", description: "An AI-assisted customer experience platform that helps businesses monitor reviews across different platforms, analyse them and prepare relevant responses.", problem: "The operational load of monitoring, interpreting and responding to reviews spread across channels.", audience: "Businesses that want a structured view of customer feedback", tags: ["AI", "Analysis", "Customer experience"] },
     { slug: "archived-rd", name: "AI Agent Infrastructure Research", status: "Archived R&D study", type: "Experimental infrastructure", description: "A previous experimental study into deploying, running, managing and serving different AI agents.", problem: "Reliable hosting and management of different AI agents.", audience: "Technical research and prototyping", tags: ["R&D", "AI agents", "Infrastructure"], archived: true }
   ]
 };

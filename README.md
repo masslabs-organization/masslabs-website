@@ -1,82 +1,38 @@
 # MassLabs Website
 
-MassLabs’ın Türkçe ve İngilizce kurumsal web sitesi. Proje; yapay zekâ, otomasyon, özel yazılım, SaaS ve Ar-Ge yetkinliklerini tanıtan, Vercel ücretsiz planıyla uyumlu statik sayfalar üretir.
+Türkçe ve İngilizce statik kurumsal site. Node.js 20+ ile çalışır; ek paket, veritabanı veya sunucu API’si gerektirmez.
 
-## Teknoloji ve Yerel Kurulum
+## Geliştirme
 
-- Node.js 20 veya üzeri
-- Bağımlılıksız statik HTML üreticisi
-- Vanilla CSS ve JavaScript
-- /tr/ ve /en/ altında SEO uyumlu sayfalar
-- Veritabanı veya sürekli çalışan sunucu gerektirmez
+- `npm run dev`: siteyi üretir ve http://127.0.0.1:4173 adresinde açılabilir hâle getirir.
+- `npm run build`: 26 yerelleştirilmiş sayfayı ve eski Review AI adreslerinin yönlendirmelerini `public/` altında üretir.
+- `npm run check`: bağlantıları ve temel metadata alanlarını denetler.
+- `npm run typecheck`: JavaScript sözdizimini denetler.
+- `npm run smoke`: örnek sayfaların HTTP yanıtlarını kontrol eder.
 
-Repository klasöründe:
+Windows PowerShell gerekirse `npm.cmd` kullanabilir.
 
-    npm run dev
+## İçerik
 
-PowerShell script politikası npm komutunu engellerse:
+- `site.config.mjs`: masslabs.tech ana adresi, iletişim ve sosyal bağlantılar.
+- `content/site-content.mjs`: Türkçe ve İngilizce içerikler, projeler ve rotalar.
+- `scripts/build.mjs`: sayfa şablonları ve HTML üretimi.
+- `css/styles.css`: aktif tasarım.
+- `js/main.js`: mobil menü ve görünürlük efektleri.
 
-    npm.cmd run dev
+Üretilen HTML yerine bu kaynakları düzenleyin, ardından build çalıştırın.
 
-Ardından http://127.0.0.1:4173 adresini açın. Yalnızca yeniden üretmek için npm run build, kontroller için npm run check kullanın.
+## İletişim ve projeler
 
-## İçerik Yönetimi
+Form yoktur. Proje talepleri sales@masslabs.tech, destek ve gizlilik talepleri support@masslabs.tech, güvenlik bildirimleri security@masslabs.tech adreslerine yönlendirilir. E-posta bağlantıları ziyaretçinin e-posta uygulamasını açar.
 
-Temel marka, iletişim, kurucu, sosyal medya, yasal ve proje URL bilgileri site.config.mjs içinde tutulur. Türkçe/İngilizce metinler, hizmetler, projeler, süreç ve SSS içerikleri content/site-content.mjs içindedir. Değişikliklerden sonra npm run build çalıştırılmalıdır.
+Reveram: https://reveram.com
+GetClawClaw: https://getclawclaw.tech/
 
-Aktif logo dosyası:
+Eski `/tr/projeler/review-ai/` ve `/en/projects/review-ai/` adresleri yeni Reveram sayfalarına yönlendirilir. Araştırmalar sayfası ilk yayınlar için hazırlık durumundadır.
 
-    assets/masslabs-logo-chatgpt.png
+## Vercel
 
-Yeni proje eklemek için projects.tr ve projects.en dizilerine aynı slug değerine sahip kayıt ekleyin. Gerekliyse siteConfig.projectLinks içine dış bağlantı tanımlayın ve üreticideki bağlantı eşlemesini genişletin.
+Framework: Other. Build: `npm run build`. Çıktı klasörü: `public`. Ayarlar `vercel.json` içinde tanımlıdır. Site adresi ve e-postalar doğrudan `site.config.mjs` içinde tutulur; ortam değişkeni gerekmez. Analytics entegrasyonu yoktur.
 
-Araştırma sayfası ilk sürümde doğrulanmamış demo yazılar yerine dürüst bir boş durum gösterir. Yeni yazılar daha sonra merkezi JSON, Markdown veya MDX yapısıyla eklenebilir.
-
-## Yayından Önce Doldurulacak Alanlar
-
-- contactEmail
-- founders içindeki tam adlar ve biyografiler
-- projectLinks.pma ve projectLinks.reviewAi
-- socialLinks
-- legal.companyName, legal.address ve legal.dataControllerName
-- archivedProjectName yazımı
-
-Boş sosyal medya veya proje URL’leri kırık bağlantı oluşturmaz. Eksik proje URL’sinde “Yakında” etiketi gösterilir.
-
-Yasal sayfalardaki metinler başlangıç şablonudur ve hukuki danışmanlık yerine geçmez. Yayından önce hukuk uzmanı tarafından şirket bilgileriyle birlikte gözden geçirilmelidir.
-
-## İletişim Formu
-
-Form alan bazlı doğrulama ve honeypot kontrolü uygular. İlk sürümde veriler sunucuda saklanmaz; başarılı doğrulamadan sonra ziyaretçinin e-posta uygulamasında yapılandırılmış bir mesaj hazırlar.
-
-Doğrudan sunucu üzerinden gönderim istenirse js/main.js içindeki adaptör Vercel serverless route veya tercih edilen e-posta sağlayıcısıyla değiştirilebilir. Gizli anahtarlar frontend koduna eklenmemelidir.
-
-## Environment Variables
-
-.env.example içeriği:
-
-    NEXT_PUBLIC_SITE_URL=https://masslabs.info
-    CONTACT_EMAIL=info@masslabs.info
-    NEXT_PUBLIC_GA_ID=
-
-NEXT_PUBLIC_SITE_URL canonical ve sitemap adresini, CONTACT_EMAIL iletişim noktalarını build sırasında değiştirir. Analytics ID boşken hiçbir takip scripti yüklenmez.
-
-## Vercel Deployment
-
-1. GitHub repository’sini Vercel’e bağlayın.
-2. Framework Preset olarak Other seçin.
-3. Build Command alanına npm run build yazın.
-4. Output Directory alanını public olarak ayarlayın. Repository içindeki vercel.json bu değeri ayrıca zorunlu kılar.
-5. Node.js sürümünü 20 veya üzeri seçin.
-6. Environment variable değerlerini Production ortamına ekleyin.
-7. Deploy işlemini başlatın.
-
-vercel.json güvenlik başlıklarını, temiz URL davranışını ve public çıktı klasörünü tanımlar. Build; sitemap.xml, robots.txt, 404 sayfası ve tüm yerelleştirilmiş HTML dosyalarını public/ altında paketler.
-
-## Kalite Kontrolleri
-
-    npm run build
-    npm run typecheck
-    npm run lint
-
-Check/lint komutu 26 rotada metadata, hreflang, ana landmark, görünür placeholder ve eksik iç bağlantı kontrollerini yapar.
+Kökteki `style.css`, `script.js` ve eski yasal HTML dosyaları önceki sürümden kalmıştır; build çıktısına alınmaz. Eski tasarım ayrıca `old-design` branch’indedir.

@@ -6,15 +6,15 @@
     "link": ""
   },
   {
-    "slug": "review-ai",
-    "name": "Review AI",
+    "slug": "reveram",
+    "name": "Reveram",
     "status": "in-development",
-    "link": ""
+    "link": "https://reveram.com"
   },
   {
     "slug": "archived-rd",
     "name": "AI Agent Infrastructure Research",
     "status": "archived",
-    "link": ""
+    "link": "https://getclawclaw.tech/"
   }
 ]

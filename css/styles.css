@@ -240,3 +240,9 @@ h1,h2,h3,p{overflow-wrap:break-word}
   *,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}
   .reveal{opacity:1;transform:none}
 }
+
+/* Direct contact */
+.contact-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.contact-card{padding:32px;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface)}
+.contact-card h2{margin:0;font-size:23px}.contact-card p{min-height:64px;color:var(--muted-foreground);font-size:14px}.contact-card a{color:var(--accent);overflow-wrap:anywhere}
+@media(max-width:860px){.contact-cards{grid-template-columns:1fr}.contact-card p{min-height:0}}

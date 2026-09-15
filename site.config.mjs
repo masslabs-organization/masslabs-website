@@ -1,32 +1,30 @@
 export const siteConfig = {
   siteName: "MassLabs",
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://masslabs.info",
-  contactEmail: process.env.CONTACT_EMAIL || "info@masslabs.info",
+  siteUrl: "https://masslabs.tech",
+  contactEmail: "sales@masslabs.tech",
+  supportEmail: "support@masslabs.tech",
+  securityEmail: "security@masslabs.tech",
   location: {
     tr: "İzmir, Türkiye",
     en: "Izmir, Türkiye"
   },
   socialLinks: {
-    github: "https://github.com/masslabs-organization",
-    linkedin: "",
-    x: "",
-    instagram: "",
+    github: "",
+    linkedin: "https://www.linkedin.com/company/masslabstech",
+    x: "https://x.com/masslabstech",
+    instagram: "https://www.instagram.com/masslabstech/",
     medium: ""
   },
   projectLinks: {
     pma: "",
-    reviewAi: ""
+    reveram: "https://reveram.com",
+    "archived-rd": "https://getclawclaw.tech/"
   },
-  archivedProjectName: "Get Clow Clow",
-  founders: [
-    { name: "", role: "Co-Founder", bio: { tr: "", en: "" } },
-    { name: "Ahmet", role: "Co-Founder", bio: { tr: "", en: "" } }
-  ],
+  archivedProjectName: "GetClawClaw",
   legal: {
     companyName: "MassLabs",
     address: "",
     dataControllerName: "MassLabs",
     lastUpdated: "2026-07-30"
-  },
-  analyticsId: process.env.NEXT_PUBLIC_GA_ID || ""
+  }
 };
